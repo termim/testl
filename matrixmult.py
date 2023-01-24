@@ -15,4 +15,5 @@ def matrix_multiplier(mat1, mat2):
         raise ValueError("The second matrix entered is not a matrix")
 
 
-print("hi")       
+print("hi")  
+print("bye")     
