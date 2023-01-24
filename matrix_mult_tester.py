@@ -1,7 +1,8 @@
 import numpy as np
+import pytest
 
 
-def matrix_multiplier(mat1, mat2):
+def matrix_multiplier_tester(mat1, mat2):
     row_mat1, col_mat1 = np.shape(mat1)
     row_mat2, col_mat2 = np.shape(mat2)        
 
