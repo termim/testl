@@ -24,3 +24,9 @@ def matrix_multiplier_tester(mat1, mat2):
             if type(value) != 'float' | 'int':
                 raise ValueError("Second matrix contains a \
                     non float or integer!")
+    for row in mat1:
+        if type(row) != 'list':
+            raise ValueError("Matrix 1 was not entered as a list format")
+    for row in mat2:
+        if type(row) != 'list':
+            raise ValueError("Matrix 2 was not entered as a list format")
