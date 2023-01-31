@@ -1,4 +1,8 @@
 import numpy as np
+import tracemalloc
+import cProfile
+
+tracemalloc.start()
 
 mat1 = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
 mat2 = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
@@ -35,9 +39,19 @@ def matrix_multiplier(mat1, mat2):
         print(row)
 
 
-matrix_multiplier(mat1, mat2)
+snapshot = tracemalloc.take_snapshot()
+top_stats = snapshot.statistics('lineno')
 
-print("Checker : ")
-result_np = np.matmul(mat1, mat2)
-for row in result_np:
-    print(row)
+#print("[ Top 10 ]")
+#for stat in top_stats[:10]:
+#    print(stat)
+
+
+def main():
+    matrix_multiplier(mat1, mat2)
+
+
+if __name__ == '__main__':
+    cProfile.run('main()')
+
+    
