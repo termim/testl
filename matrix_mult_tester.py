@@ -14,5 +14,13 @@ def matrix_multiplier_tester(mat1, mat2):
 
     if row_mat2 | col_mat2 == 0:
         raise ValueError("The second matrix entered is not a matrix")
-
-  
+    for row in mat1:
+        for value in row:
+            if type(value) != 'float' | 'int':
+                raise ValueError("First matrix contains a non \
+                    float or integer!")
+    for row in mat2:
+        for value in row:
+            if type(value) != 'float' | 'int':
+                raise ValueError("Second matrix contains a \
+                    non float or integer!")
