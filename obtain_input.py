@@ -51,4 +51,4 @@ def print_matricies(a, b):
         for col_2 in range(col2):
             print(b[row_2][col_2], end=" ")
         print()
-    print("\n")
+    

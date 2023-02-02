@@ -14,6 +14,7 @@ logging.info('This program was utilized')
 def main():
     tracemalloc.start()
     matrix1, matrix2 = obtain_input()
+    assert (matrix1 == matrix2)
     print_matricies(matrix1, matrix2)
     matrix_multiplier_tester(matrix1, matrix2)
     result = matrix_multiplier(matrix1, matrix2)
