@@ -1,10 +1,4 @@
 import numpy as np
-import pytest
-import cProfile
-import logging
-
-logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
-logging.info('This program was utilized')
 
 a = [[1, 1, 1], [2, 2, 'A'], [1, 1, 1]]
 # a = [0]

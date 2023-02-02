@@ -38,17 +38,17 @@ def print_matricies(a, b):
     row1, col1 = np.shape(a)
     row2, col2 = np.shape(b)
     # matrix 1
+    print('\n')
+    print("Matrix 1")
     for row_1 in range(row1):
         for col_1 in range(col1):
             print(a[row_1][col_1], end=" ") 
         print()  
     print("\n")
     # matrix 2
+    print("Matrix 2")
     for row_2 in range(row2):
         for col_2 in range(col2):
             print(b[row_2][col_2], end=" ")
         print()
-
-
-matt1, matt2 = obtain_input()
-print_matricies(matt1, matt2)
+    print("\n")
