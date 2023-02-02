@@ -1,3 +1,6 @@
+import numpy as np
+
+
 def obtain_input():
     # Matrix 1 input
     Rows1 = int(input("Give the number of rows in matrix 1:"))
@@ -14,13 +17,6 @@ def obtain_input():
             r.append(int(input()))
         matrix1.append(r)
 
-    # Printing the matrix given by user
-    print("\n Matrix 1")
-    for val1 in range(Rows1):
-        for val2 in range(Columns1):
-            print(matrix1[val1][val2], end=" ")
-        print()
-
     # Matrix 2 input
     Rows2 = int(input("Give the number of rows in matrix 2:"))
     Columns2 = int(input("Give the number of columns in matrix 2:"))
@@ -34,13 +30,25 @@ def obtain_input():
         s = []
         for val4 in range(Columns2):  # This for loop is to arrange columns
             s.append(int(input()))
-        matrix2.append(s)
-   
-    # Printing the matrix given by user
-    print("\n Matrix 2")
-    for _ in range(Rows2):
-        for __ in range(Columns2):
-            print(matrix2[val3][val4], end=" ")
-        print()
-          
+        matrix2.append(s)        
     return matrix1, matrix2
+
+
+def print_matricies(a, b):
+    row1, col1 = np.shape(a)
+    row2, col2 = np.shape(b)
+    # matrix 1
+    for row_1 in range(row1):
+        for col_1 in range(col1):
+            print(a[row_1][col_1], end=" ") 
+        print()  
+    print("\n")
+    # matrix 2
+    for row_2 in range(row2):
+        for col_2 in range(col2):
+            print(b[row_2][col_2], end=" ")
+        print()
+
+
+matt1, matt2 = obtain_input()
+print_matricies(matt1, matt2)

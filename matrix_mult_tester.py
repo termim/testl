@@ -45,12 +45,3 @@ def matrix_multiplier_tester(mat1, mat2):
         if not isinstance(row, list):
             print("Second matrix contains a non \
                     float or integer!")
-
-
-def main():
-    matrix_multiplier_tester(a, b)
-
-
-if __name__ == '__main__':
-    cProfile.run('main()')
-    matrix_multiplier_tester(a, b)
