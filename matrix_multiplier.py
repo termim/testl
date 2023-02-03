@@ -1,3 +1,6 @@
+
+# basis for code : https://www.geeksforgeeks.org/python-program-multiply-two-matrices/
+
 def matrix_multiplier(mat1, mat2):
     result = [[0 for i in range(len(mat2[0]))] for j in range(len(mat1))]
 
