@@ -1,4 +1,5 @@
 import numpy as np
+import pytest
 
 a = [[1, 1, 1], [2, 2, 'A'], [1, 1, 1]]
 # a = [0]
@@ -12,8 +13,7 @@ def matrix_multiplier_tester(mat1, mat2):
     row_mat2, col_mat2 = np.shape(mat2)   
     # print(row_mat2, col_mat2)     
 
-    if col_mat1 != row_mat2:
-        print("Matrix dimensions are incompatible")
+    assert (col_mat1 == row_mat2)
 
     if (row_mat1 or col_mat1 == 0) == 1:
         print("The first matrix entered is not a matrix")
